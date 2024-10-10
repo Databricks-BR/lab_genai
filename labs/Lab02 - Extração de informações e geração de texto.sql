@@ -25,6 +25,16 @@
 
 -- COMMAND ----------
 
+-- MAGIC %md ## Preparação
+-- MAGIC
+-- MAGIC Para executar os exercícios, precisamos conectar este notebook a um compute.
+-- MAGIC
+-- MAGIC Basta seguir os passos abaixo:
+-- MAGIC 1. No canto superior direito, clique em **Connect**
+-- MAGIC 2. Selecione o **SQL Warehouse** desejado
+
+-- COMMAND ----------
+
 -- MAGIC %md ## Exercício 02.01 - Acessando o conjunto de dados
 -- MAGIC
 -- MAGIC Agora, vamos acessar as avaliações de produto que carregamos no laboratório anterior.
@@ -176,6 +186,8 @@ SELECT /* complete a query com uma AI Function para extrair os produtos menciona
 -- COMMAND ----------
 
 -- MAGIC %md #### C. Extração do motivo da insatisfação
+-- MAGIC
+-- MAGIC *DICA: use a função AI_QUERY() para fornecer um prompt customizado*
 
 -- COMMAND ----------
 

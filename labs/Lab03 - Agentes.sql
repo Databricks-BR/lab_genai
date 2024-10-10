@@ -26,6 +26,16 @@
 
 -- COMMAND ----------
 
+-- MAGIC %md ## Preparação
+-- MAGIC
+-- MAGIC Para executar os exercícios, precisamos conectar este notebook a um compute.
+-- MAGIC
+-- MAGIC Basta seguir os passos abaixo:
+-- MAGIC 1. No canto superior direito, clique em **Connect**
+-- MAGIC 2. Selecione o **SQL Warehouse** desejado
+
+-- COMMAND ----------
+
 -- MAGIC %md ## Exercício 03.01 - Usando Unity Catalog Tools
 -- MAGIC
 -- MAGIC O primeiro passo na construção do nosso agente será entender como utilizar **Unity Catalog Tools**.
@@ -105,6 +115,17 @@ SELECT * FROM /* complete com a função para consultar os dados do cliente */
 -- MAGIC 5. Adicione a instrução abaixo:<br>
 -- MAGIC     `Gere uma resposta para o cliente 1 que está insatisfeito com a qualidade da tela do seu tablet. Não esqueça de customizar a mensagem com o nome do cliente.`
 -- MAGIC 6. Clique no ícone **enviar**
+
+-- COMMAND ----------
+
+-- MAGIC %md ### E. Analisando os resultados
+-- MAGIC
+-- MAGIC Com o resultado do exercício anterior, siga os passos abaixo:
+-- MAGIC
+-- MAGIC 1. Na parte inferior da resposta, clique em **`View Trace`** 
+-- MAGIC 2. Neste painel, navegue entre as diferentes ações executadas à esquerda
+-- MAGIC
+-- MAGIC Dessa forma, você poderá entender a linha de raciocínio do agente, ou seja, quais ações foram executas, com quais parâmetros e em que ordem. Além disso, quando houver algum erro de execução, também servirá de insumo para entendermos e corrigirmos eventuais problemas.
 
 -- COMMAND ----------
 
