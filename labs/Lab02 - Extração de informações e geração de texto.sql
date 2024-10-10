@@ -246,11 +246,60 @@ SELECT *, resultado.* FROM (
 -- MAGIC %md Agora, todos os nossos usuários podem aproveitar nossa função que foi cuidadosamente preparada para analisar nossas avaliações de produtos.
 -- MAGIC
 -- MAGIC E podemos escalar esse processo facilmente aplicando essa função sobre todo o nosso conjunto de dados!
+
+-- COMMAND ----------
+
+-- MAGIC %md ### 5. Analisando os dados enriquecidos
 -- MAGIC
--- MAGIC Além disso, as informações extraídas podem ser utilizadas facilmente pelos times de negócio para a construção de novas análises a partir da base de dados enriquecida que acabamos de criar!
+-- MAGIC Com as informações extraídas nos laboratórios anteriores, nossos times de negócio podem aproveitar para analisar as avaliações de produtos facilmente – já que agora temos todos os dados estruturados dentro de uma simples tabela.
+-- MAGIC
+-- MAGIC A partir dessa base de dados enriquecida criada, podemos construir análises ad-hoc, dashboards e alertas diretamente do Databricks. E, para facilitar ainda mais a vida dos nossos analistas, podemos fazer isso usando somente linguagem natural!
+-- MAGIC
+-- MAGIC Aqui vamos explorar como utilizar a **Genie** para analisar nossas avaliações de produto.
 -- MAGIC
 -- MAGIC <br>
 -- MAGIC <img src="https://raw.githubusercontent.com/databricks-demos/dbdemos-resources/main/images/product/sql-ai-functions/sql-ai-function-flow.png" width="1000">
+
+-- COMMAND ----------
+
+-- MAGIC %md #### A. Criando a Genie
+-- MAGIC
+-- MAGIC Vamos começar criando a Genie para fazer nossas perguntas. Para isso, vamos seguir os passos abaixo:
+-- MAGIC
+-- MAGIC 1. No **menu principal** à esquerda, clique em **`New`** > **`Genie space`**
+-- MAGIC
+-- MAGIC <img src="https://raw.githubusercontent.com/Databricks-BR/genie_ai_bi/main/images/genie_01.png"><br><br>
+-- MAGIC
+-- MAGIC 2. Configure sua Genie
+-- MAGIC     - Crie um nome para a sua Genie, por exemplo **`<seu_nome> Análise das Avaliações de Produtos`**
+-- MAGIC     - Selecione seu **SQL Warehouse**
+-- MAGIC     - Selecione a tabela **`academy.<seu_nome>.avaliacoes_revisadas`**
+-- MAGIC     - Clique em **`Save`**
+-- MAGIC
+-- MAGIC <img src="https://raw.githubusercontent.com/Databricks-BR/genie_ai_bi/main/images/genie_02.png" width=800>
+
+-- COMMAND ----------
+
+-- MAGIC %md #### B. Fazendo perguntas à Genie
+-- MAGIC
+-- MAGIC Com nossa Genie preparada, podemos começar a construir nossas análises!
+-- MAGIC
+-- MAGIC Basta usar o chat para fazer as perguntas abaixo:
+-- MAGIC
+-- MAGIC - Quais os produtos mencionados com maior frequência?
+-- MAGIC - Agora, quebre por sentimento
+-- MAGIC - Crie um gráfico de barras
+-- MAGIC
+-- MAGIC <img src="https://raw.githubusercontent.com/Databricks-BR/genie_ai_bi/main/images/genie_05.png"><br><br>
+-- MAGIC
+-- MAGIC Notem que, mesmo com muito pouco contexto, a Genie já conseguiu:
+-- MAGIC - Inferir quais as tabelas e colunas relevantes para responder nossas perguntas
+-- MAGIC - Aplicar filtros e agregações
+-- MAGIC - Responder perguntas adicionais sobre uma resposta anterior
+-- MAGIC - Entender como utilizar jargões
+-- MAGIC - Calcular métricas derivadas
+-- MAGIC
+-- MAGIC Aproveitem para explorar e fazer perguntas adicionais!
 
 -- COMMAND ----------
 
